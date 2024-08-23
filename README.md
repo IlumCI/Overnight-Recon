@@ -82,7 +82,6 @@ This tool is licensed under the **GNU General Public License (GPL) v3.0**. You a
    ./ovrecon.sh
    ```
 
-Certainly! Below is a section that explains what each command in the script does to the target. This will help users understand the purpose and function of each command when using the tool.
 
 ---
 
