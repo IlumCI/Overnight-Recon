@@ -34,8 +34,8 @@ This tool is licensed under the **GNU General Public License (GPL) v3.0**. You a
    Clone the repository and make the script executable.
 
    ```
-   git clone https://github.com/yourusername/overnight-recon.git
-   cd overnight-recon
+   git clone https://github.com/IlumCI/Overnight-Recon.git
+   cd Overnight-Recon
    chmod +x ovrecon.sh
    ```
 
@@ -70,8 +70,8 @@ This tool is licensed under the **GNU General Public License (GPL) v3.0**. You a
    Clone the repository and make the script executable.
 
    ```
-   git clone https://github.com/yourusername/overnight-recon.git
-   cd overnight-recon
+   git clone https://github.com/IlumCI/Overnight-Recon.git
+   cd Overnight-Recon
    chmod +x ovrecon.sh
    ```
 
@@ -97,5 +97,3 @@ This tool is licensed under the **GNU General Public License (GPL) v3.0**. You a
 - **Improvement**: Modify and enhance the tool as part of your learning process, but always ensure you comply with legal and ethical standards.
 
 ---
-
-Feel free to include this section in your repository’s README or other documentation to clarify the educational intent of the tool and emphasize the importance of ethical and legal usage.
